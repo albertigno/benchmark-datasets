@@ -28,6 +28,7 @@ X_test = X_test / 255
 y_train = np_utils.to_categorical(y_train)
 y_test = np_utils.to_categorical(y_test)
 num_classes = y_test.shape[1]
+
 # define a simple CNN model
 def baseline_model():
     # create model
@@ -50,5 +51,5 @@ model.fit(X_train, y_train, validation_data=(X_test, y_test), nb_epoch=10, batch
 scores = model.evaluate(X_test, y_test, verbose=0)
 print("CNN Error: %.2f%%" % (100-scores[1]*100))
 
-model.save("./cooolest_mnist.h5")
+model.save("./models/cooolest_mnist.h5")
 print("Saved model to disk")
