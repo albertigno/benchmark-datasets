@@ -36,10 +36,13 @@ x_test = (x_test-mean)/(std+1e-7)
 num_classes = 10
 y_train = np_utils.to_categorical(y_train,num_classes)
 y_test = np_utils.to_categorical(y_test,num_classes)
+<<<<<<< HEAD
 
 np.savez('x_test_cifar10',x_test[:100,:,:,:])
 np.savez('y_test_cifar10',y_test[:100,:,:,:])
 np.savez('x_norm_cifar10',x_test[:100,:,:,:])
+=======
+>>>>>>> cbe58a8fed20762e4b4a294d27c7492949d3e6af
  
 weight_decay = 1e-4
 model = Sequential()
